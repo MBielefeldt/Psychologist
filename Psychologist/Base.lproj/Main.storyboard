@@ -76,10 +76,10 @@
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="Cef-pb-HQs"/>
-                                        <exclude reference="eey-Zf-Quj"/>
-                                        <exclude reference="cKh-O3-s6n"/>
                                         <exclude reference="Pen-gj-ulM"/>
+                                        <exclude reference="cKh-O3-s6n"/>
                                         <exclude reference="e52-x4-k2q"/>
+                                        <exclude reference="eey-Zf-Quj"/>
                                     </mask>
                                 </variation>
                             </label>
@@ -116,6 +116,49 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-71" y="355"/>
+        </scene>
+        <!--Happiness View Controller-->
+        <scene sceneID="dbM-iA-FoL">
+            <objects>
+                <viewController id="wMZ-C5-vpp" customClass="HappinessViewController" customModule="Psychologist" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LNi-pN-eJS"/>
+                        <viewControllerLayoutGuide type="bottom" id="i07-Qb-ooM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="a82-tq-kgx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Stg-Qw-Df0" customClass="FaceView" customModule="Psychologist" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="pIv-2W-3ov" appends="YES" id="54w-Q1-mOP"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Stg-Qw-Df0" secondAttribute="trailing" id="Sfl-Mt-ZRb"/>
+                            <constraint firstItem="Stg-Qw-Df0" firstAttribute="bottom" secondItem="i07-Qb-ooM" secondAttribute="top" id="YHk-hZ-oYT"/>
+                            <constraint firstItem="Stg-Qw-Df0" firstAttribute="top" secondItem="a82-tq-kgx" secondAttribute="top" id="h9J-Va-Llq"/>
+                            <constraint firstItem="Stg-Qw-Df0" firstAttribute="leading" secondItem="a82-tq-kgx" secondAttribute="leading" id="iMR-eP-xR8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="faceView" destination="Stg-Qw-Df0" id="MTT-xY-pid"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C2p-kc-BX7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="pIv-2W-3ov">
+                    <connections>
+                        <action selector="pan:" destination="wMZ-C5-vpp" id="RJC-DI-KNq"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="771" y="355"/>
         </scene>
     </scenes>
 </document>
