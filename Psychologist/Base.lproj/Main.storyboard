@@ -120,6 +120,34 @@
                                     <segue destination="dFZ-aq-r5F" kind="showDetail" identifier="meh" id="PNu-Tl-L3K"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vHO-th-zTd">
+                                <rect key="frame" x="259" y="377" width="83" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="139" id="8wE-8P-vxD"/>
+                                    <constraint firstAttribute="height" constant="45" id="VEO-Qw-Jss"/>
+                                    <constraint firstAttribute="height" constant="45" id="WRB-lk-328"/>
+                                    <constraint firstAttribute="height" constant="45" id="XXo-kS-dFH"/>
+                                    <constraint firstAttribute="width" constant="139" id="jOO-bP-aoQ"/>
+                                    <constraint firstAttribute="width" constant="139" id="mdm-td-Xtq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Nothing">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="jOO-bP-aoQ"/>
+                                        <exclude reference="8wE-8P-vxD"/>
+                                        <exclude reference="WRB-lk-328"/>
+                                        <exclude reference="VEO-Qw-Jss"/>
+                                        <exclude reference="mdm-td-Xtq"/>
+                                        <exclude reference="XXo-kS-dFH"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="nothingButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zmc-if-0EY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -133,6 +161,8 @@
                             <constraint firstItem="shO-BJ-VWs" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="bvE-aK-3ni"/>
                             <constraint firstAttribute="centerY" secondItem="GO2-hi-fqi" secondAttribute="centerY" id="cpQ-mS-7Tq"/>
                             <constraint firstItem="GO2-hi-fqi" firstAttribute="centerX" secondItem="shO-BJ-VWs" secondAttribute="centerX" id="fST-Oh-a0E"/>
+                            <constraint firstItem="vHO-th-zTd" firstAttribute="centerX" secondItem="xGA-lU-dax" secondAttribute="centerX" id="faT-Bl-5Ns"/>
+                            <constraint firstItem="vHO-th-zTd" firstAttribute="top" secondItem="xGA-lU-dax" secondAttribute="bottom" constant="8" symbolic="YES" id="gyx-QM-9Ro"/>
                             <constraint firstItem="GO2-hi-fqi" firstAttribute="centerX" secondItem="shO-BJ-VWs" secondAttribute="centerX" id="o3q-lU-wEd"/>
                             <constraint firstItem="xGA-lU-dax" firstAttribute="centerX" secondItem="GO2-hi-fqi" secondAttribute="centerX" id="uvM-Pg-JKZ"/>
                             <constraint firstAttribute="centerX" secondItem="GO2-hi-fqi" secondAttribute="centerX" id="w4Y-1m-x8k"/>
@@ -148,6 +178,9 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Psychologist" id="ySc-VI-07l"/>
+                    <connections>
+                        <segue destination="dFZ-aq-r5F" kind="showDetail" identifier="nothing" id="DtO-Pi-5Qs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -235,6 +268,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="N2x-SM-SJC"/>
+        <segue reference="DtO-Pi-5Qs"/>
     </inferredMetricsTieBreakers>
 </document>
