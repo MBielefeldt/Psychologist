@@ -18,6 +18,7 @@ class HappinessViewController: UIViewController, FaceViewDataSource
         didSet {
             faceView.dataSource = self
             faceView.addGestureRecognizer(UIPinchGestureRecognizer(target: faceView, action: "scale:"))
+            updateUI()
         }
     }
     
@@ -46,7 +47,8 @@ class HappinessViewController: UIViewController, FaceViewDataSource
 
     func updateUI()
     {
-        faceView.setNeedsDisplay()
+        faceView?.setNeedsDisplay()
+        title = "\(happiness)"
     }
     
     func smilinessForFaceView(sender: FaceView) -> Double?
