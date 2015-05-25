@@ -136,12 +136,12 @@
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="jOO-bP-aoQ"/>
                                         <exclude reference="8wE-8P-vxD"/>
-                                        <exclude reference="WRB-lk-328"/>
                                         <exclude reference="VEO-Qw-Jss"/>
-                                        <exclude reference="mdm-td-Xtq"/>
+                                        <exclude reference="WRB-lk-328"/>
                                         <exclude reference="XXo-kS-dFH"/>
+                                        <exclude reference="jOO-bP-aoQ"/>
+                                        <exclude reference="mdm-td-Xtq"/>
                                     </mask>
                                 </variation>
                                 <connections>
@@ -186,10 +186,10 @@
             </objects>
             <point key="canvasLocation" x="1497" y="91"/>
         </scene>
-        <!--Happiness View Controller-->
+        <!--Diagnosed Happiness View Controller-->
         <scene sceneID="dbM-iA-FoL">
             <objects>
-                <viewController id="wMZ-C5-vpp" customClass="HappinessViewController" customModule="Psychologist" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wMZ-C5-vpp" customClass="DiagnosedHappinessViewController" customModule="Psychologist" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LNi-pN-eJS"/>
                         <viewControllerLayoutGuide type="bottom" id="i07-Qb-ooM"/>
@@ -216,7 +216,15 @@
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
-                    <navigationItem key="navigationItem" id="jRc-8c-Ksa"/>
+                    <navigationItem key="navigationItem" id="jRc-8c-Ksa">
+                        <barButtonItem key="rightBarButtonItem" title="History" id="BCq-s0-x2w">
+                            <connections>
+                                <segue destination="vd1-5e-N3a" kind="popoverPresentation" identifier="Show Diagnostic History" popoverAnchorBarButtonItem="BCq-s0-x2w" id="HbN-eu-1Sy">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="faceView" destination="Stg-Qw-Df0" id="MTT-xY-pid"/>
                     </connections>
@@ -229,6 +237,42 @@
                 </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2309" y="869"/>
+        </scene>
+        <!--Text View Controller-->
+        <scene sceneID="gIn-TA-Gv0">
+            <objects>
+                <viewController id="vd1-5e-N3a" customClass="TextViewController" customModule="Psychologist" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eay-AE-gqC"/>
+                        <viewControllerLayoutGuide type="bottom" id="h3B-g8-6MW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dFP-9W-ngI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXe-yg-Qpk">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cXe-yg-Qpk" firstAttribute="top" secondItem="dFP-9W-ngI" secondAttribute="top" id="6eI-Q3-87I"/>
+                            <constraint firstItem="cXe-yg-Qpk" firstAttribute="leading" secondItem="dFP-9W-ngI" secondAttribute="leading" id="GSe-OU-sMe"/>
+                            <constraint firstItem="cXe-yg-Qpk" firstAttribute="bottom" secondItem="h3B-g8-6MW" secondAttribute="top" id="Psk-cZ-29U"/>
+                            <constraint firstAttribute="trailing" secondItem="cXe-yg-Qpk" secondAttribute="trailing" id="gXv-DW-bpC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="cXe-yg-Qpk" id="beh-Rt-16N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1gH-4y-O1v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3023" y="869"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1f7-VS-w5b">
